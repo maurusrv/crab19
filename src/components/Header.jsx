@@ -1,17 +1,43 @@
+import Greeting from './Greeting'
 
 
-const style = {
+const ulStyle = {
   display: 'flex',
-  justifyContent: 'space-between'
+  // flexDirection: 'column',
+  border: '1px solid black',
 }
 
-const Header = () => {
+const liStyle = {
+  flex: 1,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  listStyleType: 'none',
+  border: '1px solid black',
+}
+
+const Header = (props) => {
+  // console.log('Header props:', props)
+  const { username } = props
+
+  let isHidden = false
+
+  // setTimeout(() => {
+  //   isHidden = true
+  // }, 5000)
+
   return (
     <header>
-      <ul style={style} id="navlinks">
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact Us</li>
+      <ul style={ulStyle} id="navlinks">
+        <li style={liStyle}>Home</li>
+        <li style={liStyle}>About</li>
+        <li style={liStyle}>Contact Us</li>
+        <li style={liStyle}>
+          <Greeting 
+            name={username} 
+            isHidden={isHidden}
+          />
+        </li>
       </ul>
     </header>
   )

@@ -28,15 +28,20 @@ function Image () {
 }
 
 class Anchor extends React.Component {
+  // constructor(props) {
+  //   super(props)
+  // }
+
   render() {
+    const { url } = this.props
     return (
       <a
         className="App-link"
-        href="https://reactjs.org"
+        href={url}
         target="_blank"
         rel="noopener noreferrer"
       >
-        Learn React
+       {url} 
       </a>
     )
   }
@@ -70,14 +75,19 @@ const HeaderContent = () => (
 // )
 
 function App() {
+
+  const username = 'Tyler' // from api / backend
+  const url = 'https://avionschool.com'
+
   return (
     <div className="App">
       {/* <header className="App-header">
         <HeaderContent />      
       </header> */}
       <main>
-        <Header />
-        <Button />
+        <Header username={username} />
+        <Anchor url={url} />
+        {/* <Button /> */}
       </main>
       {/* <footer>
         <FooterContentNull />
