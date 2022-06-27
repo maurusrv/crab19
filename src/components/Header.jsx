@@ -34,7 +34,7 @@ const Header = (props) => {
         <li style={liStyle}>Contact Us</li>
         <li style={liStyle}>
           <Greeting 
-            name={username} 
+            text={username} 
             isHidden={isHidden}
           />
         </li>

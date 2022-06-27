@@ -4,14 +4,14 @@ const GreetingText = () => 'Hello'
 const Greeting = (props) => {
   console.log('Greeting props:', props)
 
-  const { name, isHidden } = props
+  const { text, isHidden } = props
 
   if (isHidden) {
     return null
   }
 
   return (
-    <h3><GreetingText />, {name}!</h3> // or {prop.username}
+    <h3><GreetingText />, {text}!</h3> // or {prop.username}
   )
 }
 
