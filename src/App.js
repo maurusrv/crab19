@@ -1,11 +1,14 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import React, { Fragment, useState } from 'react';
+import React
+// , { Fragment, useState } 
+from 'react';
+import LoginForm from './components/LoginForm'
 // import Header from './components/Header';
 // import Button from './components/Button';
-import Form from './components/Form'
-import ClassComponent from './components/ClassComponent';
-import FunctionalComponent from './components/FunctionalComponent';
+// import Form from './components/Form'
+// import ClassComponent from './components/ClassComponent';
+// import FunctionalComponent from './components/FunctionalComponent';
 
 // const Code = () => {
 //   const text = 'src/App.js'
@@ -78,20 +81,21 @@ import FunctionalComponent from './components/FunctionalComponent';
 // // )
 
 function App() {
-  const [isClassComponentRemoved, setIsClassComponentRemoved] = useState(false)
-  const [isFuncComponentRemoved, setIsFuncComponentRemoved] = useState(false)
+  // const [isClassComponentRemoved, setIsClassComponentRemoved] = useState(false)
+  // const [isFuncComponentRemoved, setIsFuncComponentRemoved] = useState(false)
 
 //   const username = 'Tyler' // from api / backend
 //   const url = 'https://avionschool.com'
 
   return (
     <div className="App">
-      {!isClassComponentRemoved && <ClassComponent />}
-      {!isFuncComponentRemoved && <FunctionalComponent />}
-      <div>
+      <LoginForm></LoginForm>
+      {/* {!isClassComponentRemoved && <ClassComponent />}
+      {!isFuncComponentRemoved && <FunctionalComponent />} */}
+      {/* <div>
         <button onClick={() => setIsClassComponentRemoved(true)}>Remove Class Component</button> 
         <button onClick={() => setIsFuncComponentRemoved(true)}>Remove Functional Component</button> 
-      </div>
+      </div> */}
       {/* <Form></Form> */}
       {/* <header className="App-header">
         <HeaderContent />      
